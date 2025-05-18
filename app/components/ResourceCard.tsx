@@ -39,6 +39,8 @@ const resourceImages: Record<string, string> = {
   solflare: '/solflare.png',
   trust: '/trust.png',
   axiom: '/axiom.webp',
+  bullx: '/bullx.webp',
+  photon: '/photon.avif'
 };
 
 // Helper function to get category icon or image
