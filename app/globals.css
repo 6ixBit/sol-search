@@ -1,15 +1,20 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-vt323: 'VT323', monospace;
+  --font-press-start-2p: 'Press Start 2P', system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-vt323);
+  --font-mono: var(--font-vt323);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +27,71 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-vt323);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: var(--font-press-start-2p);
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-family: var(--font-press-start-2p);
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-family: var(--font-press-start-2p);
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust button text */
+button {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Adjust input text */
+input, textarea {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* You can use it in your components like this: */
+.pixel-text {
+  font-family: var(--font-vt323);
+}
+
+/* Header specific styles */
+.header-text {
+  font-family: var(--font-press-start-2p);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
