@@ -1,5 +1,5 @@
 // Category button component
-export default function CategoryButton({ active, darkMode, onClick, children, icon }) {
+export default function CategoryButton({ active, darkMode, onClick, children, icon }: { active: boolean, darkMode: boolean, onClick: () => void, children: React.ReactNode, icon: React.ReactNode }) {
     return (
       <button
         onClick={onClick}

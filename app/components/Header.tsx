@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Search, ChevronRight } from 'lucide-react';
 
-export default function Header({ isMenuOpen, setIsMenuOpen, searchQuery, setSearchQuery }) {
-  const darkMode = false; // Keeping this for now, but we’ll design for a standalone header
+export default function Header({ isMenuOpen, setIsMenuOpen, searchQuery, setSearchQuery }: { isMenuOpen: boolean, setIsMenuOpen: (isMenuOpen: boolean) => void, searchQuery: string, setSearchQuery: (searchQuery: string) => void }) {
 
   return (
     <header className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-500">

@@ -1,15 +1,16 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Search, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { resources, categories } from './constants';
 import ResourceCard from '@/app/components/ResourceCard';
 import CategoryButton from '@/app/components/CategoryButton';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import { Resource } from './constants';
 
 export default function SolSearch() {
-  const [darkMode, setDarkMode] = useState(true);
+  const darkMode = false;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function SolSearch() {
     return matchesSearch && matchesCategory;
   });
 
-  const groupedResources = {};
+  const groupedResources: Record<string, Resource[]> = {};
   resources.forEach((resource) => {
     if (!groupedResources[resource.category]) {
       groupedResources[resource.category] = [];
@@ -50,6 +51,7 @@ export default function SolSearch() {
                   active={activeCategory === 'all'} 
                   darkMode={darkMode}
                   onClick={() => setActiveCategory('all')}
+                  icon={<></>}
                 >
                   All
                 </CategoryButton>
@@ -77,6 +79,7 @@ export default function SolSearch() {
                   active={activeCategory === 'all'} 
                   darkMode={darkMode}
                   onClick={() => setActiveCategory('all')}
+                  icon={<></>}
                 >
                   All
                 </CategoryButton>
@@ -102,7 +105,7 @@ export default function SolSearch() {
             {/* Results */}
             {activeCategory === 'all' ? (
               // Show all categories when "All" is selected
-              Object.keys(groupedResources).map((category) => {
+              Object.keys(groupedResources).map((category: string) => {
                 const categoryInfo = categories.find(c => c.id === category);
                 return (
                   <div key={category} className="mb-8">
@@ -112,12 +115,12 @@ export default function SolSearch() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {groupedResources[category]
-                        .filter(resource => 
+                        .filter((resource: Resource) => 
                           resource.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           resource.description.toLowerCase().includes(searchQuery.toLowerCase())
                         )
                         .slice(0, 3)
-                        .map((resource) => (
+                        .map((resource: Resource) => (
                           <ResourceCard 
                             key={resource.id} 
                             resource={resource} 

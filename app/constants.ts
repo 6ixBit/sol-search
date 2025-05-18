@@ -1,5 +1,11 @@
 // Categories data
-export const categories = [
+export interface Category {
+    id: string;
+    name: string;
+    icon: string;
+  }
+
+export const categories: Category[] = [
     { id: 'dexes', name: 'DEXes', icon: '📊' },
     { id: 'wallets', name: 'Wallets', icon: '👛' },
     { id: 'trading', name: 'Trading Platforms', icon: '📈' },
@@ -13,7 +19,16 @@ export const categories = [
   ];
   
   // Sample resources data
-  export const resources = [
+  export interface Resource {
+    id: string;
+    category: string;
+    name: string;
+    description: string;
+    url: string;
+    tags?: string[];
+  }
+
+  export const resources: Resource[] = [
     // DEXes
     {
       id: 'raydium',
