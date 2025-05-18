@@ -29,10 +29,16 @@ const getCategoryColor = (category: string, darkMode: boolean): string => {
   return colors[category as keyof typeof colors] || (darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700');
 };
 
-// Resource image mapping
+// TODO: Host inside of constant object 
 const resourceImages: Record<string, string> = {
   raydium: '/raydium.jpg',
   phantom: '/phantom.webp',
+  pump: '/pump.png',
+  meteora: '/meteora.jpg',
+  jupiter: '/jupiter.jpg',
+  solflare: '/solflare.png',
+  trust: '/trust.png',
+  axiom: '/axiom.webp',
 };
 
 // Helper function to get category icon or image
