@@ -1,14 +1,14 @@
 'use client'
 
 import React, { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Search } from 'lucide-react';
 import { resources, categories } from './constants';
 import ResourceCard from '@/app/components/ResourceCard';
 import CategoryButton from '@/app/components/CategoryButton';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import { Resource } from './constants';
-
+import CategoryAdSpace from '@/app/components/CategoryAdSpace';
 export default function SolSearch() {
   const darkMode = false;
   const [activeCategory, setActiveCategory] = useState('all');
@@ -37,10 +37,31 @@ export default function SolSearch() {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-900'} transition-colors duration-200`}>
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Header />
 
-      {/* Main content */}
       <main className="px-4 md:px-8 py-6">
+        {/* Search Section */}
+        <div className="max-w-3xl mx-auto mb-12 text-center">
+          <h1 className="text-4xl font-bold mb-4">Sol Search</h1>
+          <p className="text-lg mb-8 text-gray-600">
+            Your one stop shop for everything Solana.
+          </p>
+          <div className="relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search for DEXs, wallets, tools, and more..."
+              className={`w-full px-4 py-3 pl-12 rounded-lg border ${
+                darkMode 
+                  ? 'bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400' 
+                  : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
+              } focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row gap-6">
           {/* Sidebar / Categories - Mobile Dropdown */}
           <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mb-4`}>
@@ -154,13 +175,10 @@ export default function SolSearch() {
                 </div>
                 
                 {/* Category Ad Space */}
-                <div className={`mb-6 p-3 rounded-lg border border-dashed ${darkMode ? 'border-gray-700 bg-gray-800/50' : 'border-gray-300 bg-gray-100'} text-center`}>
-                  <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>SPONSORED</p>
-                  <div className="h-12 flex items-center justify-center">
-                    <span className={`text-sm ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>Category Ad Space</span>
-                  </div>
+                <div className="mb-6">
+                  <CategoryAdSpace />
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {filteredResources.map((resource) => (
                     <ResourceCard 

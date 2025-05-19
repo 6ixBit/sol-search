@@ -172,37 +172,30 @@ export const categories: Category[] = [
   
     // Education
     {
-      id: 'solana-cookbook',
+      id: 'hackquest',
       category: 'education',
-      name: 'Solana Cookbook',
-      description: 'A developer resource that provides the essential concepts and references for building applications on Solana.',
-      url: '#',
-      tags: ['Development', 'Reference'],
+      name: 'Hack Quest',
+      description: 'A developer resource that provides the essential concepts and references for building applications on Solana with Rust.',
+      url: 'https://www.hackquest.io/learning-track/Solana',
+      tags: ['Development', 'Reference', 'Beginners'],
     },
     {
-      id: 'soldev',
+      id: 'rareskills',
       category: 'education',
-      name: 'Solana Development Course',
-      description: 'Comprehensive course covering Solana fundamentals, Rust programming, and on-chain program development.',
-      url: '#',
+      name: 'Rare Skills',
+      description: 'Designed for engineers with a beginner or intermediate background in Ethereum or EVM development to get up to speed quickly',
+      url: 'https://www.rareskills.io/solana-tutorial',
       tags: ['Beginners', 'Course'],
     },
-    {
-      id: 'solana-bootcamp',
-      category: 'education',
-      name: 'Solana Bootcamp',
-      description: 'Intensive training program for developers looking to build on Solana, including practical project work.',
-      url: '#',
-      tags: ['Interactive', 'Advanced'],
-    },
+
   
     // NFTs
     {
-      id: 'magic-eden',
+      id: 'magic_eden',
       category: 'nfts',
       name: 'Magic Eden',
       description: 'The leading NFT marketplace on Solana with the largest collection of NFTs for browsing, buying and selling.',
-      url: '#',
+      url: 'https://magiceden.us/solana',
       tags: ['Marketplace', 'Popular'],
     },
     {
@@ -210,7 +203,7 @@ export const categories: Category[] = [
       category: 'nfts',
       name: 'Metaplex',
       description: 'The protocol that powers NFTs on Solana, providing tools for creators to launch their collections.',
-      url: '#',
+      url: 'https://www.metaplex.com/',
       tags: ['Protocol', 'Tools'],
     },
   

@@ -47,6 +47,10 @@ const resourceImages: Record<string, string> = {
   solcard: '/solcard.png',
   kast: '/kast.png',
   bonk: '/bonk.png',
+  hackquest: '/hackquest.png',
+  rareskills: '/rareskills.png',
+  magic_eden: '/magiceden.png',
+  metaplex: '/metaplex.png',
 };
 
 // Helper function to get category icon or image

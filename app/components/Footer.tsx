@@ -31,7 +31,7 @@ export default function Footer() {
               The ultimate navigator for the Solana ecosystem
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 items-center">
+          {/* <div className="flex flex-col md:flex-row gap-4 items-center">
             <button
               className={`px-4 py-2 rounded-lg ${
                 darkMode
@@ -50,7 +50,7 @@ export default function Footer() {
             >
               Advertise with Us
             </button>
-          </div>
+          </div> */}
         </div>
         <div
           className={`mt-8 pt-4 border-t ${

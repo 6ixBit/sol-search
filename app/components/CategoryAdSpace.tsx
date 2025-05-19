@@ -16,13 +16,16 @@ export default function CategoryAdSpace() {
           SPONSORED
         </p>
         <div className="h-12 flex items-center justify-center">
-          <span
+          <a
+            href="https://x.com/solsearch"
+            target="_blank"
+            rel="noopener noreferrer" 
             className={`text-sm ${
               darkMode ? "text-gray-500" : "text-gray-400"
-            }`}
+            } hover:underline cursor-pointer`}
           >
-            Category Ad Space
-          </span>
+            Your Ad Could Go Here! Contact us @SolSearch On X
+          </a>
         </div>
       </div>
     </>
