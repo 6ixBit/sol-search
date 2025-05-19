@@ -45,7 +45,16 @@ export const categories: Category[] = [
       name: 'Pump Fun',
       description: 'A user-friendly decentralized exchange for the Solana ecosystem focused on the best-in-class trading experience.',
       url: 'https://pump.fun',
-      tags: ['AMM', 'Simple UI', 'Trading', 'Memecoins'],
+      tags: ['Launchpad', 'Simple UI', 'Trading', 'Memecoins'],
+    },
+
+    {
+      id: 'bonk',
+      category: 'dexes',
+      name: 'Bonk Fun',
+      description: 'Bonk is a launch pad for creating memecoins on Solana.',
+      url: 'https://letsbonk.fun/',
+      tags: ['Launchpad', 'Memecoins'],
     },
     {
       id: 'meteora',
@@ -70,7 +79,7 @@ export const categories: Category[] = [
       category: 'wallets',
       name: 'Phantom',
       description: 'A friendly, easy-to-use crypto wallet built for the Solana blockchain that makes it safe and easy to store, send, receive, collect, and swap tokens.',
-      url: '#',
+      url: 'https://phantom.com/',
       tags: ['Browser Extension', 'Mobile'],
     },
     {
@@ -78,7 +87,7 @@ export const categories: Category[] = [
       category: 'wallets',
       name: 'Solflare',
       description: 'A non-custodial wallet built specifically for Solana that supports Ledger hardware wallets.',
-      url: '#',
+      url: 'https://www.solflare.com/',
       tags: ['Browser Extension', 'Hardware Support'],
     },
     {
@@ -138,7 +147,7 @@ export const categories: Category[] = [
       category: 'jobs',
       name: 'Web3 Careers',
       description: 'Find Solana development, product, and marketing roles across Web3 and DeFi projects.',
-      url: '#',
+      url: 'https://web3.careers/',
       tags: ['DeFi', 'Web3'],
     },
 
@@ -150,6 +159,15 @@ export const categories: Category[] = [
       description: 'Solcard is a platform for spending your Solana using Apple Pay.',
       url: 'https://solcard.cc/r/sixthpath',
       tags: ['Spend', 'Crypto', 'No-KYC'],
+    },
+
+    {
+      id: 'kast',
+      category: 'spend',
+      name: 'Kast',
+      description: 'KAST is the step crypto and Web3 needed, providing an off-ramp debit card that makes everyday purchases simple and fast.',
+      url: 'https://www.kast.xyz/',
+      tags: ['Spend', 'Crypto', 'KYC'],
     },
   
     // Education

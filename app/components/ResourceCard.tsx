@@ -45,6 +45,8 @@ const resourceImages: Record<string, string> = {
   web3_careers: '/web3.png',
   solana_jobs: '/sol.png',
   solcard: '/solcard.png',
+  kast: '/kast.png',
+  bonk: '/bonk.png',
 };
 
 // Helper function to get category icon or image
@@ -73,7 +75,7 @@ const getCategoryIcon = (resource: Resource): React.ReactNode => {
     nfts: '🖼️',
     education: '📚',
     jobs: '💼',
-    social: '👥',
+    // social: '👥',
     // gaming: '🎮',
     // liquidity: '💧',
     // tools: '🛠️',
