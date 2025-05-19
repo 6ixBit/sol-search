@@ -100,8 +100,6 @@ export default function SolSearch() {
 
           {/* Main content area */}
           <div className="flex-grow">
-         
-
             {/* Results */}
             {activeCategory === 'all' ? (
               // Show all categories when "All" is selected

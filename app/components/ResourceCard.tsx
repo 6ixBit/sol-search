@@ -40,7 +40,11 @@ const resourceImages: Record<string, string> = {
   trust: '/trust.png',
   axiom: '/axiom.webp',
   bullx: '/bullx.webp',
-  photon: '/photon.avif'
+  photon: '/photon.avif',
+  remote3: '/remote3.png',
+  web3_careers: '/web3.png',
+  solana_jobs: '/sol.png',
+  solcard: '/solcard.png',
 };
 
 // Helper function to get category icon or image
@@ -65,13 +69,14 @@ const getCategoryIcon = (resource: Resource): React.ReactNode => {
     dexes: '📊',
     wallets: '👛',
     trading: '📈',
+    spend: '💳', 
     nfts: '🖼️',
-    jobs: '💼',
     education: '📚',
-    liquidity: '💧',
+    jobs: '💼',
     social: '👥',
-    tools: '🛠️',
-    gaming: '🎮',
+    // gaming: '🎮',
+    // liquidity: '💧',
+    // tools: '🛠️',
   };
   
   return icons[resource.category] || '🔍';

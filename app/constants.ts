@@ -10,12 +10,13 @@ export const categories: Category[] = [
     { id: 'wallets', name: 'Wallets', icon: '👛' },
     { id: 'trading', name: 'Trading Platforms', icon: '📈' },
     { id: 'jobs', name: 'Jobs', icon: '💼' },
+    { id: 'spend', name: 'Spend', icon: '💳' },
     { id: 'education', name: 'Education', icon: '📚' },
-    { id: 'liquidity', name: 'Liquidity Pools', icon: '💧' },
     { id: 'nfts', name: 'NFTs', icon: '🖼️' },
-    { id: 'social', name: 'Social', icon: '👥' },
     { id: 'tools', name: 'Developer Tools', icon: '🛠️' },
-    { id: 'gaming', name: 'Gaming', icon: '🎮' },
+    // { id: 'social', name: 'Social', icon: '👥' },
+    // { id: 'liquidity', name: 'Liquidity Pools', icon: '💧' },
+    // { id: 'gaming', name: 'Gaming', icon: '🎮' },
   ];
   
   // Sample resources data
@@ -117,28 +118,38 @@ export const categories: Category[] = [
   
     // Jobs
     {
-      id: 'solana-jobs',
+      id: 'solana_jobs',
       category: 'jobs',
       name: 'Solana Jobs',
       description: 'Official job board for roles in the Solana ecosystem, from developers to marketing and design.',
-      url: '#',
+      url: 'https://jobs.solana.com/jobs',
       tags: ['Official', 'Full-time'],
     },
     {
-      id: 'crypto-jobs-list',
+      id: 'remote3',
       category: 'jobs',
-      name: 'Crypto Jobs List',
+      name: 'Remote3',
       description: 'Job board featuring Solana developer positions, including remote and contract opportunities.',
-      url: '#',
-      tags: ['Remote', 'Contract'],
+      url: 'https://www.remote3.co/',
+      tags: ['Remote', 'Contract', 'Full-time'],
     },
     {
-      id: 'web3-careers',
+      id: 'web3_careers',
       category: 'jobs',
       name: 'Web3 Careers',
       description: 'Find Solana development, product, and marketing roles across Web3 and DeFi projects.',
       url: '#',
       tags: ['DeFi', 'Web3'],
+    },
+
+    // SPEND
+    {
+      id: 'solcard',
+      category: 'spend',
+      name: 'Solcard',
+      description: 'Solcard is a platform for spending your Solana using Apple Pay.',
+      url: 'https://solcard.cc/r/sixthpath',
+      tags: ['Spend', 'Crypto', 'No-KYC'],
     },
   
     // Education
@@ -167,32 +178,6 @@ export const categories: Category[] = [
       tags: ['Interactive', 'Advanced'],
     },
   
-    // Liquidity Pools
-    {
-      id: 'saber',
-      category: 'liquidity',
-      name: 'Saber',
-      description: 'Cross-chain stablecoin and wrapped assets exchange on Solana focusing on capital efficiency.',
-      url: '#',
-      tags: ['Stablecoins', 'Low Slippage'],
-    },
-    {
-      id: 'mercurial',
-      category: 'liquidity',
-      name: 'Mercurial Finance',
-      description: 'Dynamic vaults for stable assets on Solana with higher capital efficiency and better swap rates.',
-      url: '#',
-      tags: ['Stable Pools', 'Capital Efficient'],
-    },
-    {
-      id: 'atrix',
-      category: 'liquidity',
-      name: 'Atrix',
-      description: 'Decentralized liquidity provision protocol allowing users to earn fees by providing tokens to pools.',
-      url: '#',
-      tags: ['Farming', 'Yield'],
-    },
-  
     // NFTs
     {
       id: 'magic-eden',
@@ -212,56 +197,83 @@ export const categories: Category[] = [
     },
   
     // Social
-    {
-      id: 'dialect',
-      category: 'social',
-      name: 'Dialect',
-      description: 'Web3 messaging protocol built on Solana that enables wallet-to-wallet communication.',
-      url: '#',
-      tags: ['Messaging', 'Protocol'],
-    },
-    {
-      id: 'solcial',
-      category: 'social',
-      name: 'Solcial',
-      description: 'Decentralized and censorship-resistant social media platform built on Solana.',
-      url: '#',
-      tags: ['Social Media', 'Decentralized'],
-    },
+    // {
+    //   id: 'dialect',
+    //   category: 'social',
+    //   name: 'Dialect',
+    //   description: 'Web3 messaging protocol built on Solana that enables wallet-to-wallet communication.',
+    //   url: '#',
+    //   tags: ['Messaging', 'Protocol'],
+    // },
+    // {
+    //   id: 'solcial',
+    //   category: 'social',
+    //   name: 'Solcial',
+    //   description: 'Decentralized and censorship-resistant social media platform built on Solana.',
+    //   url: '#',
+    //   tags: ['Social Media', 'Decentralized'],
+    // },
+
+    // // Liquidity Pools
+    // {
+    //   id: 'saber',
+    //   category: 'liquidity',
+    //   name: 'Saber',
+    //   description: 'Cross-chain stablecoin and wrapped assets exchange on Solana focusing on capital efficiency.',
+    //   url: '#',
+    //   tags: ['Stablecoins', 'Low Slippage'],
+    // },
+    // {
+    //   id: 'mercurial',
+    //   category: 'liquidity',
+    //   name: 'Mercurial Finance',
+    //   description: 'Dynamic vaults for stable assets on Solana with higher capital efficiency and better swap rates.',
+    //   url: '#',
+    //   tags: ['Stable Pools', 'Capital Efficient'],
+    // },
+    // {
+    //   id: 'atrix',
+    //   category: 'liquidity',
+    //   name: 'Atrix',
+    //   description: 'Decentralized liquidity provision protocol allowing users to earn fees by providing tokens to pools.',
+    //   url: '#',
+    //   tags: ['Farming', 'Yield'],
+    // },
+
   
-    // Developer Tools
-    {
-      id: 'anchor',
-      category: 'tools',
-      name: 'Anchor',
-      description: 'Development framework for Solana that makes it easy to build secure on-chain programs.',
-      url: '#',
-      tags: ['Framework', 'Rust'],
-    },
-    {
-      id: 'solana-playground',
-      category: 'tools',
-      name: 'Solana Playground',
-      description: 'Web-based IDE for building, deploying, and testing Solana programs without local setup.',
-      url: '#',
-      tags: ['IDE', 'WebApp'],
-    },
+    // // Developer Tools
+    // {
+    //   id: 'anchor',
+    //   category: 'tools',
+    //   name: 'Anchor',
+    //   description: 'Development framework for Solana that makes it easy to build secure on-chain programs.',
+    //   url: '#',
+    //   tags: ['Framework', 'Rust'],
+    // },
+    // {
+    //   id: 'solana-playground',
+    //   category: 'tools',
+    //   name: 'Solana Playground',
+    //   description: 'Web-based IDE for building, deploying, and testing Solana programs without local setup.',
+    //   url: '#',
+    //   tags: ['IDE', 'WebApp'],
+    // },
   
     // Gaming
-    {
-      id: 'star-atlas',
-      category: 'gaming',
-      name: 'Star Atlas',
-      description: 'A grand strategy game of space exploration, territorial conquest, and political domination.',
-      url: '#',
-      tags: ['MMO', 'Strategy'],
-    },
-    {
-      id: 'aurory',
-      category: 'gaming',
-      name: 'Aurory',
-      description: 'A play-to-earn gaming metaverse powered by Solana with NFT gameplay elements.',
-      url: '#',
-      tags: ['Play-to-Earn', 'RPG'],
-    },
+    // {
+    //   id: 'star-atlas',
+    //   category: 'gaming',
+    //   name: 'Star Atlas',
+    //   description: 'A grand strategy game of space exploration, territorial conquest, and political domination.',
+    //   url: '#',
+    //   tags: ['MMO', 'Strategy'],
+    // },
+    // {
+    //   id: 'aurory',
+    //   category: 'gaming',
+    //   name: 'Aurory',
+    //   description: 'A play-to-earn gaming metaverse powered by Solana with NFT gameplay elements.',
+    //   url: '#',
+    //   tags: ['Play-to-Earn', 'RPG'],
+    // },
   ];
