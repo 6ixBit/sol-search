@@ -13,7 +13,7 @@ export default function SolSearch() {
   const darkMode = false;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMenuOpen = false;
 
   const filteredResources = resources.filter((resource) => {
     const matchesSearch = 

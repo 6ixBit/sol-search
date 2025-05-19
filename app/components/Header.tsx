@@ -1,5 +1,3 @@
-import { Search, ChevronRight } from 'lucide-react';
-
 export default function Header() {
 
   return (
